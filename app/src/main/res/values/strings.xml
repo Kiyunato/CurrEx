@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CurrEx</string>
+    <string name="convert">Convert</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="select_or_type_currency">Select or type currency</string>
+    <string name="select_or_type_currency2">Select or type currency</string>
+</resources>
