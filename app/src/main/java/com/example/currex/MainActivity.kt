@@ -2,7 +2,6 @@ package com.example.currex
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
