@@ -53,13 +53,12 @@ class MainActivity : AppCompatActivity() {
                     val rates = response.getJSONObject("rates")
                     val currencyList = ArrayList(rates.keys().asSequence().toList())
 
-                    // Debugging Log
-                    Log.d("Currencies", "Loaded Currencies: $currencyList")
+                    // Create separate adapters for each AutoCompleteTextView
+                    val fromAdapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, currencyList)
+                    val toAdapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, currencyList)
 
-                    val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, currencyList)
-
-                    fromCurrency.setAdapter(adapter)
-                    toCurrency.setAdapter(adapter)
+                    fromCurrency.setAdapter(fromAdapter)
+                    toCurrency.setAdapter(toAdapter)
 
                     // Ensure dropdown appears when clicked
                     fromCurrency.setOnFocusChangeListener { _, hasFocus ->
